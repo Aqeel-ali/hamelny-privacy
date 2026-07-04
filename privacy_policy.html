@@ -1,0 +1,1183 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="سياسة الخصوصية لتطبيق حملني - نلتزم بحماية بيانات الزبائن والسائقين وتوفير أعلى معايير الأمان الرقمي في العراق.">
+  <title>سياسة الخصوصية – تطبيق حملني</title>
+  
+  <!-- Google Fonts - Cairo & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Remix Icons CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #ED7D31;
+      --primary-dark: #d6641a;
+      --primary-light: #fef0e6;
+      --secondary: #2B2D42;
+      --dark: #1A1B2F;
+      --light-bg: #F8F9FC;
+      --white: #FFFFFF;
+      --gray-100: #F1F3F9;
+      --gray-200: #E2E8F0;
+      --gray-600: #4A5568;
+      --gray-800: #1A202C;
+      --success: #10B981;
+      --danger: #EF4444;
+      --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      --shadow-sm: 0 2px 8px rgba(0,0,0,0.04);
+      --shadow-md: 0 10px 30px rgba(237, 125, 49, 0.08);
+      --shadow-lg: 0 20px 40px rgba(0,0,0,0.06);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Cairo', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--light-bg);
+      color: var(--secondary);
+      line-height: 1.8;
+      overflow-x: hidden;
+    }
+
+    /* Selection Highlight */
+    ::selection {
+      background-color: var(--primary);
+      color: var(--white);
+    }
+
+    /* Scrollbar Style */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: var(--light-bg);
+    }
+    ::-webkit-scrollbar-thumb {
+      background: var(--primary);
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--primary-dark);
+    }
+
+    /* Navigation Header */
+    header {
+      background-color: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      border-bottom: 1px solid var(--gray-200);
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 12px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--dark);
+    }
+
+    .logo-img {
+      height: 48px;
+      width: auto;
+      object-fit: contain;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.08));
+    }
+
+    .logo-text {
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+
+    .logo-text span {
+      color: var(--primary);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--gray-600);
+      font-weight: 600;
+      font-size: 15px;
+      padding: 8px 16px;
+      border-radius: 8px;
+      transition: var(--transition);
+    }
+
+    .nav-links a:hover, .nav-links a.active {
+      color: var(--primary);
+      background-color: var(--primary-light);
+    }
+
+    /* Hero Section */
+    .hero {
+      background: radial-gradient(circle at 10% 20%, rgba(254, 240, 230, 0.6) 0%, rgba(248, 249, 252, 1) 90%);
+      padding: 160px 24px 80px;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -10%;
+      left: 70%;
+      width: 300px;
+      height: 300px;
+      background: var(--primary);
+      filter: blur(150px);
+      opacity: 0.15;
+      pointer-events: none;
+      border-radius: 50%;
+    }
+
+    .badge {
+      background-color: var(--primary-light);
+      color: var(--primary);
+      padding: 6px 16px;
+      border-radius: 100px;
+      font-size: 13px;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 20px;
+      border: 1px solid rgba(237, 125, 49, 0.15);
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      color: var(--dark);
+      font-weight: 800;
+      margin-bottom: 16px;
+      line-height: 1.3;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: var(--gray-600);
+      max-width: 650px;
+      margin: 0 auto 32px;
+      font-weight: 500;
+    }
+
+    .hero-meta {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .meta-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      color: var(--gray-600);
+      font-weight: 600;
+      background-color: var(--white);
+      padding: 10px 20px;
+      border-radius: 12px;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--gray-100);
+    }
+
+    .meta-item i {
+      color: var(--primary);
+      font-size: 18px;
+    }
+
+    /* Main Content Area */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px 100px;
+    }
+
+    /* Tabs Component */
+    .tabs-wrapper {
+      background-color: var(--white);
+      padding: 10px;
+      border-radius: 16px;
+      box-shadow: var(--shadow-md);
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 50px;
+      position: sticky;
+      top: 90px;
+      z-index: 90;
+      border: 1px solid var(--gray-100);
+    }
+
+    .tab-btn {
+      flex: 1;
+      max-width: 250px;
+      background: none;
+      border: none;
+      padding: 14px 20px;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--gray-600);
+      cursor: pointer;
+      border-radius: 12px;
+      transition: var(--transition);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .tab-btn i {
+      font-size: 20px;
+    }
+
+    .tab-btn:hover {
+      color: var(--primary);
+      background-color: var(--light-bg);
+    }
+
+    .tab-btn.active {
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color: var(--white);
+      box-shadow: 0 8px 20px rgba(237, 125, 49, 0.25);
+    }
+
+    /* Content Cards */
+    .section-content {
+      display: none;
+      animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    .section-content.active {
+      display: block;
+    }
+
+    .grid-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 30px;
+      margin-bottom: 50px;
+    }
+
+    .card {
+      background-color: var(--white);
+      border-radius: 20px;
+      padding: 32px;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--gray-100);
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+      opacity: 0;
+      transform: translateY(30px);
+    }
+
+    .card.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+      border-color: rgba(237, 125, 49, 0.2);
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 4px;
+      height: 0;
+      background: linear-gradient(to bottom, var(--primary), var(--primary-dark));
+      transition: var(--transition);
+    }
+
+    .card:hover::before {
+      height: 100%;
+    }
+
+    .card-icon-box {
+      width: 54px;
+      height: 54px;
+      background-color: var(--primary-light);
+      color: var(--primary);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+      margin-bottom: 24px;
+      transition: var(--transition);
+    }
+
+    .card:hover .card-icon-box {
+      background-color: var(--primary);
+      color: var(--white);
+      transform: scale(1.05);
+    }
+
+    .card h3 {
+      font-size: 20px;
+      color: var(--dark);
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+
+    .card p {
+      color: var(--gray-600);
+      font-size: 15px;
+      margin-bottom: 16px;
+    }
+
+    .card ul {
+      list-style: none;
+    }
+
+    .card ul li {
+      font-size: 14.5px;
+      color: var(--gray-600);
+      position: relative;
+      padding-right: 22px;
+      margin-bottom: 10px;
+    }
+
+    .card ul li::before {
+      content: "\ea52"; /* Remix Icon arrow-left-s-line */
+      font-family: 'remixicon';
+      position: absolute;
+      right: 0;
+      top: 0;
+      color: var(--primary);
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    /* Warning Card Specific Styling */
+    .card.warning-style {
+      background: linear-gradient(135deg, #FFF9F6 0%, #FFFFFF 100%);
+      border-color: rgba(237, 125, 49, 0.15);
+    }
+    .card.warning-style .card-icon-box {
+      background-color: rgba(239, 68, 68, 0.08);
+      color: var(--danger);
+    }
+    .card.warning-style:hover .card-icon-box {
+      background-color: var(--danger);
+      color: var(--white);
+    }
+
+    /* Long Content Block */
+    .wide-card {
+      grid-column: 1 / -1;
+      background-color: var(--white);
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--gray-100);
+      margin-bottom: 40px;
+      transition: var(--transition);
+      opacity: 0;
+      transform: translateY(30px);
+    }
+
+    .wide-card.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .wide-card:hover {
+      box-shadow: var(--shadow-lg);
+    }
+
+    .wide-card h2 {
+      font-size: 24px;
+      color: var(--dark);
+      font-weight: 700;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .wide-card h2 i {
+      color: var(--primary);
+      font-size: 28px;
+    }
+
+    .wide-card p {
+      color: var(--gray-600);
+      font-size: 16px;
+      margin-bottom: 24px;
+    }
+
+    .features-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .feature-item {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      background-color: var(--light-bg);
+      padding: 20px;
+      border-radius: 14px;
+      transition: var(--transition);
+    }
+
+    .feature-item:hover {
+      background-color: var(--white);
+      box-shadow: var(--shadow-sm);
+      transform: translateY(-2px);
+    }
+
+    .feature-item-icon {
+      background-color: var(--white);
+      color: var(--primary);
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .feature-item-content h4 {
+      font-size: 16px;
+      color: var(--dark);
+      margin-bottom: 6px;
+      font-weight: 700;
+    }
+
+    .feature-item-content p {
+      font-size: 13.5px;
+      color: var(--gray-600);
+      margin: 0;
+    }
+
+    /* Contact Details Section */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin-top: 32px;
+    }
+
+    .contact-card {
+      background-color: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 16px;
+      padding: 24px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      text-decoration: none;
+      color: var(--white);
+      transition: var(--transition);
+    }
+
+    .contact-card:hover {
+      background-color: rgba(255, 255, 255, 0.15);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .contact-card-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+    }
+
+    .contact-card.phone .contact-card-icon {
+      background-color: rgba(237, 125, 49, 0.2);
+      color: var(--primary);
+    }
+
+    .contact-card.whatsapp .contact-card-icon {
+      background-color: rgba(37, 211, 102, 0.2);
+      color: #25D366;
+    }
+
+    .contact-card.email .contact-card-icon {
+      background-color: rgba(66, 133, 244, 0.2);
+      color: #4285F4;
+    }
+
+    .contact-card-info h4 {
+      font-size: 14px;
+      color: var(--gray-200);
+      margin-bottom: 4px;
+    }
+
+    .contact-card-info p {
+      font-size: 16px;
+      font-weight: 700;
+      margin: 0;
+    }
+
+    /* Support Callout Section */
+    .support-callout {
+      background: linear-gradient(135deg, var(--secondary) 0%, var(--dark) 100%);
+      color: var(--white);
+      border-radius: 24px;
+      padding: 60px 40px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      margin-top: 40px;
+      opacity: 0;
+      transform: translateY(30px);
+    }
+
+    .support-callout.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .support-callout::after {
+      content: '';
+      position: absolute;
+      top: -30%;
+      right: -10%;
+      width: 350px;
+      height: 350px;
+      background: var(--primary);
+      filter: blur(150px);
+      opacity: 0.15;
+      pointer-events: none;
+      border-radius: 50%;
+    }
+
+    .support-callout h2 {
+      font-size: 32px;
+      font-weight: 800;
+      margin-bottom: 16px;
+    }
+
+    .support-callout p {
+      color: var(--gray-200);
+      font-size: 17px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Footer */
+    footer {
+      background-color: var(--white);
+      border-top: 1px solid var(--gray-200);
+      padding: 60px 24px 30px;
+    }
+
+    .footer-top {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+
+    .footer-brand {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .footer-brand-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .footer-brand h3 {
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--dark);
+    }
+
+    .footer-brand h3 span {
+      color: var(--primary);
+    }
+
+    .footer-brand p {
+      color: var(--gray-600);
+      font-size: 14px;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 16px;
+    }
+
+    .social-btn {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background-color: var(--light-bg);
+      color: var(--gray-600);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      text-decoration: none;
+      transition: var(--transition);
+      border: 1px solid var(--gray-200);
+    }
+
+    .social-btn:hover {
+      background-color: var(--primary);
+      color: var(--white);
+      border-color: var(--primary);
+      transform: translateY(-2px);
+    }
+
+    .footer-bottom {
+      max-width: 1200px;
+      margin: 0 auto;
+      border-top: 1px solid var(--gray-200);
+      padding-top: 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      font-size: 13.5px;
+      color: var(--gray-600);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .footer-links a {
+      color: var(--gray-600);
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .footer-links a:hover {
+      color: var(--primary);
+    }
+
+    /* Keyframe Animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 992px) {
+      .hero h1 {
+        font-size: 34px;
+      }
+      .grid-cards {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+      .hero {
+        padding: 130px 16px 60px;
+      }
+      .hero h1 {
+        font-size: 28px;
+      }
+      .tabs-wrapper {
+        flex-direction: column;
+        top: 80px;
+      }
+      .tab-btn {
+        max-width: 100%;
+        padding: 10px 15px;
+      }
+      .wide-card, .support-callout {
+        padding: 30px 20px;
+      }
+      .footer-top {
+        flex-direction: column;
+        text-align: center;
+      }
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header>
+    <div class="nav-container">
+      <a href="#" class="logo-area">
+        <img class="logo-img" src="./logo.png" alt="شعار حملني">
+        <div class="logo-text">حَمَّلـ<span>ني</span></div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#hero" class="active">الرئيسية</a></li>
+        <li><a href="#terms-section" onclick="switchTab('customer')">سياسة الزبون</a></li>
+        <li><a href="#terms-section" onclick="switchTab('driver')">سياسة السائق</a></li>
+        <li><a href="#terms-section" onclick="switchTab('security')">أمان البيانات</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Hero Banner -->
+  <section class="hero" id="hero">
+    <div class="badge">
+      <i class="ri-shield-check-line"></i>
+      خصوصية محمية بالكامل
+    </div>
+    <h1>سياسة الخصوصية وأمان البيانات</h1>
+    <p>في تطبيق حملني، نضع حماية بياناتكم وخصوصيتكم على رأس أولوياتنا. نوضح هنا بكل شفافية ماهية المعلومات التي نجمعها وكيف نعمل على حمايتها في سيرفراتنا الخاصة بكل أمان.</p>
+    
+    <div class="hero-meta">
+      <div class="meta-item">
+        <i class="ri-server-line"></i>
+        تخزين آمن ومحمي 100%
+      </div>
+      <div class="meta-item">
+        <i class="ri-government-line"></i>
+        متوافق مع القوانين العراقية
+      </div>
+      <div class="meta-item">
+        <i class="ri-refresh-line"></i>
+        تحديث مستمر: 2026
+      </div>
+    </div>
+  </section>
+
+  <!-- Content Section Container -->
+  <main class="container" id="terms-section">
+    
+    <!-- Tab Controls Sticky Wrapper -->
+    <div class="tabs-wrapper">
+      <button class="tab-btn active" onclick="switchTab('customer')" id="tab-customer">
+        <i class="ri-user-smile-line"></i>
+        سياسة الزبون (صاحب الحمولة)
+      </button>
+      <button class="tab-btn" onclick="switchTab('driver')" id="tab-driver">
+        <i class="ri-steering-2-line"></i>
+        سياسة السائق (الكابتن)
+      </button>
+      <button class="tab-btn" onclick="switchTab('security')" id="tab-security">
+        <i class="ri-lock-2-line"></i>
+        أمان البيانات والتخزين
+      </button>
+    </div>
+
+    <!-- 1. CUSTOMER PRIVACY CONTENT -->
+    <div class="section-content active" id="content-customer">
+      <div class="grid-cards">
+        
+        <!-- Card 1 -->
+        <div class="card animate-on-scroll">
+          <div class="card-icon-box">
+            <i class="ri-folder-user-line"></i>
+          </div>
+          <h3>بيانات الحساب الشخصي</h3>
+          <p>عند تسجيلك كزبون في التطبيق، نقوم بجمع المعلومات الأساسية التالية لتهيئة حسابك وضمان تواصلك الآمن مع السائقين:</p>
+          <ul>
+            <li>الاسم الكامل لمصداقية التعامل.</li>
+            <li>رقم الهاتف لتفعيل الحساب والاتصال.</li>
+            <li>البريد الإلكتروني لإرسال الفواتير والإشعارات.</li>
+          </ul>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card animate-on-scroll">
+          <div class="card-icon-box">
+            <i class="ri-map-pin-user-line"></i>
+          </div>
+          <h3>الموقع الجغرافي والخرائط</h3>
+          <p>نصل إلى موقعك الجغرافي فقط أثناء استخدامك الفعلي للتطبيق لتسهيل طلب الرحلات واختيار نقطة الانطلاق والوجهة:</p>
+          <ul>
+            <li>تحديد موقع الانطلاق الحالي تلقائياً لتسهيل البحث.</li>
+            <li>إمكانية البحث النصي عن المواقع وحفظ المواقع المفضلة.</li>
+            <li>لا نتتبع موقعك في الخلفية مطلقاً بعد إغلاق التطبيق.</li>
+          </ul>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card animate-on-scroll">
+          <div class="card-icon-box">
+            <i class="ri-price-tag-3-line"></i>
+          </div>
+          <h3>بيانات الرحلات والتسعير</h3>
+          <p>لضمان تقديم خدمة متكاملة وتوثيق تعاملاتك المادية، نقوم بتسجيل التفاصيل المرتبطة بالرحلة ومراجعتها:</p>
+          <ul>
+            <li>سجل الرحلات التفصيلي (نقاط الانطلاق، الوصول، والتوقفات).</li>
+            <li>نوع الحمولة المراد نقلها (منزلية، إنشائية، غذائية.. إلخ).</li>
+            <li>حساب المسافة والوقت الفعلي عبر خرائط OSRM المفتوحة.</li>
+            <li>الرموز الترويجية والعروض التي تم تطبيقها على الرحلات.</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Wide Card (Customer Permissions) -->
+      <div class="wide-card animate-on-scroll">
+        <h2>
+          <i class="ri-key-line"></i>
+          الأذونات والصلاحيات المطلوبة من الزبون
+        </h2>
+        <p>يحتاج تطبيق الزبون إلى الوصول لبعض صلاحيات الجهاز للعمل بكفاءة تامة. يتم طلب هذه الصلاحيات فورياً ويمكن التحكم بها من إعدادات الهاتف:</p>
+        <div class="features-list">
+          <div class="feature-item">
+            <div class="feature-item-icon"><i class="ri-map-pin-2-line"></i></div>
+            <div class="feature-item-content">
+              <h4>صلاحية الموقع الجغرافي (Location)</h4>
+              <p>مطلوبة لتحديد نقطة الانطلاق بدقة وعرض خريطة المسار وحساب التسعيرة المقدرة.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-item-icon"><i class="ri-notification-3-line"></i></div>
+            <div class="feature-item-content">
+              <h4>الإشعارات التنبيهية (Notifications)</h4>
+              <p>لإخطارك بحالة الطلب، وقبول السائق، ووصول الشحنة، والعروض الترويجية.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-item-icon"><i class="ri-image-line"></i></div>
+            <div class="feature-item-content">
+              <h4>الوصول للوسائط والصور (Gallery)</h4>
+              <p>تستخدم فقط عند رغبتك في رفع صورة لحسابك الشخصي أو إرفاق صور للحمولة لتوثيقها.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. DRIVER PRIVACY CONTENT -->
+    <div class="section-content" id="content-driver">
+      <div class="grid-cards">
+        
+        <!-- Card 1 -->
+        <div class="card animate-on-scroll">
+          <div class="card-icon-box">
+            <i class="ri-file-shield-2-line"></i>
+          </div>
+          <h3>بيانات التحقق والترخيص</h3>
+          <p>للحفاظ على أمان المنصة والزبائن، يلتزم السائق بتقديم وثائق رسمية دقيقة يتم مراجعتها وحفظها بأمان تام:</p>
+          <ul>
+            <li>البطاقة الوطنية الموحدة أو هوية الأحوال المدنية.</li>
+            <li>إجازة السوق (رخصة القيادة) سارية المفعول.</li>
+            <li>سنوية المركبة وصور حية للمركبة من جميع الجهات.</li>
+            <li>صورة شخصية حديثة للسائق يتم مطابقتها وعرضها للزبون.</li>
+          </ul>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card animate-on-scroll">
+          <div class="card-icon-box">
+            <i class="ri-navigation-line"></i>
+          </div>
+          <h3>تتبع الموقع المستمر (GPS Tracking)</h3>
+          <p>يعتمد تشغيل الخدمة للسائقين بشكل كامل على ميزة تتبع الإحداثيات المستمرة لضمان دقة العمل ومصداقية الرحلة:</p>
+          <ul>
+            <li>تتبع موقع السائق لمطابقة الطلبات القريبة منه وإرسالها له.</li>
+            <li>تتبع مستمر ودقيق أثناء سير الرحلة لتوثيق المسار الفعلي وحساب السعر.</li>
+            <li>يسمح التطبيق بتتبع موقع المركبة بالخلفية لضمان سلامة الحمولة وأمانها.</li>
+          </ul>
+        </div>
+
+        <!-- Card 3 warning style -->
+        <div class="card warning-style animate-on-scroll">
+          <div class="card-icon-box">
+            <i class="ri-error-warning-line"></i>
+          </div>
+          <h3>التزام إلزامية الـ GPS والمخالفات</h3>
+          <p>تعتبر ميزة تحديد المواقع شرطاً أساسياً لعمل السائق واستحقاقه للأرباح، ويترتب على إغلاقها الإجراءات التالية:</p>
+          <ul>
+            <li>يُحظر قطعياً إغلاق نظام GPS أثناء نقل الحمولة.</li>
+            <li>يؤدي إغلاق التتبع أو التلاعب به إلى حرمان السائق من أرباح الرحلة.</li>
+            <li>يحق لإدارة المنصة تعليق أو حظر حساب السائق نهائياً في حال تكرار إيقاف التتبع.</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Wide Card (Driver Permissions) -->
+      <div class="wide-card animate-on-scroll">
+        <h2>
+          <i class="ri-key-line"></i>
+          الأذونات والصلاحيات المطلوبة من السائق
+        </h2>
+        <p>يتطلب تطبيق السائق الوصول لعدد من الصلاحيات والوصول للنظام لكي يعمل بكفاءة تامة وتلقي طلبات الرحلات في الخلفية:</p>
+        <div class="features-list">
+          <div class="feature-item">
+            <div class="feature-item-icon"><i class="ri-focus-3-line"></i></div>
+            <div class="feature-item-content">
+              <h4>الموقع الجغرافي بالخلفية (Background Location)</h4>
+              <p>لإتاحة تتبع الرحلة بشكل مستمر حتى عند استخدام تطبيقات خرائط أخرى أو إقفال شاشة الهاتف.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-item-icon"><i class="ri-camera-line"></i></div>
+            <div class="feature-item-content">
+              <h4>صلاحية الكاميرا (Camera)</h4>
+              <p>لالتقاط وتحديث الوثائق الرسمية المطلوبة وصورة المركبة والحمولة مباشرة.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-item-icon"><i class="ri-volume-up-line"></i></div>
+            <div class="feature-item-content">
+              <h4>صلاحيات الصوت والتنبيهات المرتفعة</h4>
+              <p>لضمان إشعار السائق بوجود طلبات رحلة قريبة نغمة تنبيه واضحة لسرعة الاستجابة.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. SECURITY & STORAGE PRIVACY CONTENT -->
+    <div class="section-content" id="content-security">
+      
+      <!-- Wide Card (Server Security) -->
+      <div class="wide-card animate-on-scroll">
+        <h2>
+          <i class="ri-server-fill"></i>
+          بنية الاستضافة وتخزين البيانات الآمن
+        </h2>
+        <p>تتم إدارة كافة البيانات الحساسة والمعلومات الشخصية والوثائق المرفوعة عبر بنية برمجية صارمة ومستضافة بالكامل على سيرفراتنا الخاصة بكل أمان:</p>
+        
+        <div class="features-list">
+          <div class="feature-item">
+            <div class="feature-item-icon"><i class="ri-shield-keyhole-line"></i></div>
+            <div class="feature-item-content">
+              <h4>تشفير البيانات</h4>
+              <p>يتم نقل البيانات بين تطبيقات الهاتف واللوحة الخلفية للسيرفرات باستخدام بروتوكولات مشفرة وآمنة (HTTPS) لضمان عدم اعتراضها.</p>
+            </div>
+          </div>
+          
+          <div class="feature-item">
+            <div class="feature-item-icon"><i class="ri-user-forbid-line"></i></div>
+            <div class="feature-item-content">
+              <h4>تقييد الوصول الداخلي</h4>
+              <p>تخضع الوثائق الرسمية وإجازات السوق وصور الهويات المرفوعة من السائقين لقيود وصول إدارية مشددة، ولا يُسمح إلا للموظفين المخولين بمراجعتها لأغراض التفعيل فقط.</p>
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="feature-item-icon"><i class="ri-hard-drive-line"></i></div>
+            <div class="feature-item-content">
+              <h4>سيرفرات خاصة ومحمية</h4>
+              <p>نحن لا نعتمد على جهات خارجية مستأجرة أو غير موثوقة في معالجة تفاصيل الرحلات. جميع قواعد البيانات والملفات مخزنة بأمان في بنية تحتية خاصة بنا وتحت إشراف فريق تقني متكامل.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-cards">
+        <!-- Card 1 -->
+        <div class="card animate-on-scroll">
+          <div class="card-icon-box">
+            <i class="ri-share-forward-line"></i>
+          </div>
+          <h3>سياسة مشاركة البيانات</h3>
+          <p>نلتزم بعدم بيع أو تأجير أو مشاركة أي من بياناتكم الشخصية مع أي طرف ثالث خارج النظام، باستثناء الحالات التالية:</p>
+          <ul>
+            <li>مشاركة البيانات اللازمة للرحلة بين الزبون والسائق لإتمام عملية التوصيل (الاسم، الموقع، رقم الهاتف، المركبة).</li>
+            <li>الاستجابة للطلبات القانونية الصادرة من الجهات القضائية والحكومية العراقية الرسمية.</li>
+          </ul>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card animate-on-scroll">
+          <div class="card-icon-box">
+            <i class="ri-user-settings-line"></i>
+          </div>
+          <h3>حقوق المستخدمين والتحكم بالبيانات</h3>
+          <p>تضمن منصة حملني لكافة المستخدمين كامل الحقوق والصلاحيات للتحكم ببياناتهم المخزنة بكل سهولة:</p>
+          <ul>
+            <li>الحق في الاطلاع على كافة البيانات المخزنة وتعديلها.</li>
+            <li>إمكانية طلب حذف الحساب والبيانات التابعة له بشكل نهائي ومباشر من داخل إعدادات التطبيق.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Support Callout Section -->
+    <section class="support-callout animate-on-scroll">
+      <h2>هل لديك أي استفسار حول الخصوصية؟</h2>
+      <p>فريق الدعم الفني متواجد على مدار الساعة للإجابة على تساؤلاتكم ومساعدتكم لضمان تجربة نقل آمنة وسلسة.</p>
+      
+      <!-- Contact Cards Grid -->
+      <div class="contact-grid">
+        <a href="tel:07838980124" class="contact-card phone">
+          <div class="contact-card-icon"><i class="ri-phone-fill"></i></div>
+          <div class="contact-card-info">
+            <h4>الاتصال الهاتفي</h4>
+            <p>07838980124</p>
+          </div>
+        </a>
+
+        <a href="https://wa.me/9647838980124" target="_blank" class="contact-card whatsapp">
+          <div class="contact-card-icon"><i class="ri-whatsapp-line"></i></div>
+          <div class="contact-card-info">
+            <h4>تواصل عبر الواتساب</h4>
+            <p>07838980124</p>
+          </div>
+        </a>
+
+        <a href="mailto:support@hamlny.com" class="contact-card email">
+          <div class="contact-card-icon"><i class="ri-mail-send-line"></i></div>
+          <div class="contact-card-info">
+            <h4>البريد الإلكتروني</h4>
+            <p>support@hamlny.com</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-brand-header">
+          <img class="logo-img" src="./logo.png" alt="شعار حملني">
+          <h3>حَمَّلـ<span>ني</span></h3>
+        </div>
+        <p>منصة النقل الذكي الأولى والأكثر أماناً لنقل الحمولات والمواد في العراق.</p>
+      </div>
+      <div class="social-links">
+        <a href="#" class="social-btn"><i class="ri-facebook-fill"></i></a>
+        <a href="#" class="social-btn"><i class="ri-twitter-x-fill"></i></a>
+        <a href="#" class="social-btn"><i class="ri-instagram-line"></i></a>
+        <a href="#" class="social-btn"><i class="ri-linkedin-fill"></i></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>جميع الحقوق محفوظة &copy; 2026 تطبيق حملني للنقل الذكي.</p>
+      <div class="footer-links">
+        <a href="#" onclick="switchTab('customer')">سياسة الزبون</a>
+        <a href="#" onclick="switchTab('driver')">سياسة السائق</a>
+        <a href="#" onclick="switchTab('security')">أمان البيانات</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript for Tabs and Scroll Reveal Animation -->
+  <script>
+    // Tab switching logic
+    function switchTab(tabId) {
+      // 1. Update button classes
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('active');
+      });
+      document.getElementById('tab-' + tabId).classList.add('active');
+
+      // 2. Update content sections visibility
+      document.querySelectorAll('.section-content').forEach(section => {
+        section.classList.remove('active');
+      });
+      document.getElementById('content-' + tabId).classList.add('active');
+
+      // 3. Update nav link active status
+      document.querySelectorAll('.nav-links a').forEach(link => {
+        link.classList.remove('active');
+      });
+      
+      // Selectively activate link
+      const targetLink = document.querySelector(`.nav-links a[href*="${tabId}"]`);
+      if (targetLink) {
+        targetLink.classList.add('active');
+      }
+
+      // Re-trigger scroll reveal calculations
+      handleScrollReveal();
+    }
+
+    // Scroll reveal animation logic
+    function handleScrollReveal() {
+      const reveals = document.querySelectorAll('.card, .wide-card, .support-callout');
+      const windowHeight = window.innerHeight;
+      const revealPoint = 150;
+
+      reveals.forEach(reveal => {
+        const revealTop = reveal.getBoundingClientRect().top;
+        if (revealTop < windowHeight - revealPoint) {
+          reveal.classList.add('visible');
+        }
+      });
+    }
+
+    // Attach listeners
+    window.addEventListener('scroll', handleScrollReveal);
+    window.addEventListener('load', () => {
+      handleScrollReveal();
+      
+      // Auto active state for top navbar on scroll
+      window.addEventListener('scroll', () => {
+        const header = document.querySelector('header');
+        if (window.scrollY > 50) {
+          header.style.padding = '8px 24px';
+          header.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+        } else {
+          header.style.padding = '12px 24px';
+          header.style.backgroundColor = 'rgba(255, 255, 255, 0.85)';
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
